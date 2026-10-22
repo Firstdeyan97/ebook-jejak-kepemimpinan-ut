@@ -673,6 +673,225 @@
     .hidden {
       display: none !important;
     }
+
+    @media (max-width: 900px) {
+      .reader-layout {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .reader-main {
+        order: 1;
+      }
+
+      .sidebar-panel {
+        order: 2;
+        position: static;
+        max-height: none;
+        padding: 16px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .top-appbar {
+        padding: 12px 14px;
+      }
+
+      .appbar-title {
+        font-size: 1.02rem;
+      }
+
+      .main-container {
+        padding: 14px 12px 64px;
+      }
+
+      .view-tabs {
+        gap: 4px;
+        padding: 5px;
+        margin-bottom: 18px;
+        border-radius: 12px;
+      }
+
+      .tab-btn {
+        padding: 9px 6px;
+        font-size: 0.76rem;
+        line-height: 1.25;
+        border-radius: 8px;
+      }
+
+      .prototype-card {
+        padding: 22px 16px 26px;
+        border-radius: 22px;
+      }
+
+      .book-cover-3d {
+        width: 176px;
+        height: 258px;
+        margin-bottom: 20px;
+      }
+
+      .pub-main-title {
+        font-size: 1.16rem;
+        padding: 0 4px;
+      }
+
+      .pub-author {
+        font-size: 0.95rem;
+      }
+
+      .pub-meta-small {
+        font-size: 0.8rem;
+        margin-bottom: 18px;
+      }
+
+      .info-grid-2x2 {
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .info-box {
+        padding: 12px 13px;
+        border-radius: 14px;
+      }
+
+      .info-label {
+        font-size: 0.76rem;
+      }
+
+      .info-value {
+        font-size: 1.1rem;
+      }
+
+      .info-value.category-val {
+        font-size: 0.94rem;
+        line-height: 1.3;
+      }
+
+      .action-buttons-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .btn-primary-navy,
+      .btn-outline-navy {
+        padding: 10px 12px;
+        font-size: 0.78rem;
+        gap: 7px;
+      }
+
+      .btn-primary-navy svg,
+      .btn-outline-navy svg {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+      }
+
+      .btn-wa-share {
+        padding: 12px 14px;
+        font-size: 0.82rem;
+        text-align: center;
+        line-height: 1.35;
+      }
+
+      .reader-toolbar {
+        padding: 10px 12px;
+        gap: 10px;
+      }
+
+      .page-nav-group {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .page-nav-group .nav-pill-btn {
+        padding: 8px 10px;
+        font-size: 0.78rem;
+      }
+
+      #btn-download-sample-toolbar {
+        width: 100%;
+        text-align: center;
+      }
+
+      .book-page-sheet {
+        padding: 22px 18px 20px;
+        min-height: auto;
+        border-radius: 16px;
+      }
+
+      .sheet-header {
+        flex-wrap: wrap;
+        gap: 6px;
+        font-size: 0.72rem;
+        margin-bottom: 18px;
+        padding-bottom: 10px;
+      }
+
+      .sheet-chapter-tag {
+        font-size: 0.74rem;
+      }
+
+      .sheet-title {
+        font-size: 1.48rem;
+        line-height: 1.25;
+      }
+
+      .sheet-subtitle {
+        font-size: 0.88rem;
+        margin-bottom: 16px;
+      }
+
+      .sheet-body-p {
+        font-size: 0.94rem;
+        line-height: 1.68;
+        text-align: left;
+        margin-bottom: 14px;
+      }
+
+      .sheet-highlight-box {
+        font-size: 1.02rem;
+        padding: 12px 14px;
+        margin: 16px 0;
+      }
+
+      .sheet-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        font-size: 0.74rem;
+        margin-top: 18px;
+      }
+
+      .locked-gate-box {
+        padding: 22px 16px;
+        border-radius: 14px;
+      }
+
+      .locked-gate-title {
+        font-size: 1.35rem;
+      }
+
+      .locked-gate-desc {
+        font-size: 0.85rem;
+      }
+
+      .all-pages-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .action-buttons-row {
+        grid-template-columns: 1fr;
+      }
+
+      .btn-primary-navy,
+      .btn-outline-navy {
+        justify-content: center;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -691,9 +910,9 @@
 
   <main class="main-container">
     <div class="view-tabs">
-      <button class="tab-btn active" id="tab-prototype">1. Detail Publikasi</button>
-      <button class="tab-btn" id="tab-reader">2. Pratinjau Buku (Pengantar &amp; Daftar Isi)</button>
-      <button class="tab-btn" id="tab-index">3. Struktur 210 Halaman</button>
+      <button class="tab-btn active" id="tab-prototype">Detail Publikasi</button>
+      <button class="tab-btn" id="tab-reader">Baca Pratinjau (Hlm 1–10)</button>
+      <button class="tab-btn" id="tab-index">Daftar 210 Hlm</button>
     </div>
 
     <section id="view-prototype">
